@@ -11,18 +11,19 @@ EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+ARG TARGETARCH
 
 # Build
 WORKDIR /src
 COPY ["src/Ewencodes.HelloWorld.Api/Ewencodes.HelloWorld.Api.csproj", "Ewencodes.HelloWorld.Api/"]
-RUN dotnet restore "Ewencodes.HelloWorld.Api/Ewencodes.HelloWorld.Api.csproj"
+RUN dotnet restore "Ewencodes.HelloWorld.Api/Ewencodes.HelloWorld.Api.csproj" -a $TARGETARCH
 COPY ./src .
 WORKDIR /src/Ewencodes.HelloWorld.Api
-RUN dotnet build "Ewencodes.HelloWorld.Api.csproj" -c Release -o /app/build
+RUN dotnet build "Ewencodes.HelloWorld.Api.csproj" -c Release -a $TARGETARCH -o /app/build
 
 # Publish
 FROM build AS publish
-RUN dotnet publish "Ewencodes.HelloWorld.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "Ewencodes.HelloWorld.Api.csproj" -c Release -a $TARGETARCH -o /app/publish
 
 # App
 FROM base AS final
