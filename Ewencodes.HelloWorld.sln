@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3A2DB7A2-4593-4101-8B72-CB90CEF144B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ewencodes.HelloWorld.Api", "src\Ewencodes.HelloWorld.Api\Ewencodes.HelloWorld.Api.csproj", "{50E96696-79DB-4614-A2AD-6549C8CCB0F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50E96696-79DB-4614-A2AD-6549C8CCB0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E96696-79DB-4614-A2AD-6549C8CCB0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E96696-79DB-4614-A2AD-6549C8CCB0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E96696-79DB-4614-A2AD-6549C8CCB0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50E96696-79DB-4614-A2AD-6549C8CCB0F2} = {3A2DB7A2-4593-4101-8B72-CB90CEF144B9}
+	EndGlobalSection
+EndGlobal
